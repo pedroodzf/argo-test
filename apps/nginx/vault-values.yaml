@@ -1,0 +1,15 @@
+server:
+  image:
+    repository: hashicorp/vault-enterprise
+    tag: "2.0.2-ent"
+
+  enterpriseLicense:
+    secretName: vault-ent-license
+    secretKey: license
+
+  dev:
+    enabled: true
+    devRootToken: "root"  # sets a fixed root token so you always know it
+
+ui:
+  enabled: true
